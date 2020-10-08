@@ -103,6 +103,7 @@ export default function Form() {
           name='name'
           value={formState.name}
           onChange={inputChange}
+          data-cy="name"
         />
         {errors.name.length > 0 ? <p className='error'>{errors.name}</p> : null}
       </label>
@@ -113,6 +114,7 @@ export default function Form() {
           name='email'
           value={formState.email}
           onChange={inputChange}
+          data-cy="email"
         />
         {errors.email.length > 0 ? (
           <p className='error'>{errors.email}</p>
@@ -124,6 +126,7 @@ export default function Form() {
           name='motivation'
           value={formState.motivation}
           onChange={inputChange}
+          data-cy="motivation"
         />
         {errors.motivation.length > 0 ? (
           <p className='error'>{errors.motivation}</p>
@@ -131,11 +134,12 @@ export default function Form() {
       </label>
       <label htmlFor='positions'>
         What would you like to help with?
-        <select id='positions' name='positions' onChange={inputChange}>
+        <select id='positions' name='positions' onChange={inputChange} data-cy="positions">
           <option value='Newsletter'>Newsletter</option>
           <option value='Yard Work'>Yard Work</option>
           <option value='Administrative Work'>Administrative Work</option>
           <option value='Tabling'>Tabling</option>
+          
         </select>
       </label>
       <label htmlFor='terms' className='terms'>
@@ -144,6 +148,7 @@ export default function Form() {
           name='terms'
           checked={formState.terms}
           onChange={inputChange}
+          data-cy="submit"
         />
         Terms & Conditions
       </label>
